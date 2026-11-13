@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>英文筆記本</title>
+  <meta name="description" content="整理文法、單字、片語搭配、台式英文常見錯誤與情境會話的英文筆記網站，一個主題一頁，依 CLAUDE.md 規則持續新增。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="home" data-root="">
+  <header id="site-header"></header>
+
+  <main>
+    <section class="home-hero">
+      <h1>我的英文筆記本</h1>
+      <p class="en-title" lang="en">English Notes — one topic, one page.</p>
+      <p>這裡整理我學英文時遇到的文法、單字、片語搭配、台式英文常見錯誤與情境會話。每篇筆記都用同樣的格式：一句話重點、觀念說明、例句、常見錯誤、小練習。</p>
+      <ul class="stats" id="stats"></ul>
+    </section>
+
+    <div class="toolbar">
+      <label for="search" class="result-count">搜尋筆記</label>
+      <input id="search" class="search" type="search" placeholder="輸入關鍵字，例如：時態、email、make" autocomplete="off">
+      <div class="filters" id="filters" role="group" aria-label="依分類篩選"></div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+    </div>
+
+    <div class="card-grid" id="note-cards">
+      <noscript><p class="empty">請開啟 JavaScript 以顯示筆記列表。</p></noscript>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="data/notes.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

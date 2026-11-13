@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{中文標題}}｜英文筆記本</title>
+  <meta name="description" content="{{一句話摘要}}">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<!-- 使用方式：複製到 notes/{category}-{slug}.html，替換所有雙大括號佔位文字，再到 data/notes.js 登記。規則見 CLAUDE.md 第 6、8 節 -->
+<body data-note="{{category-slug}}" data-root="../">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- 1. 標題區（必填） -->
+    <section class="note-hero">
+      <span id="note-badges"></span>
+      <h1>{{中文標題}}</h1>
+      <p class="en-title" lang="en">{{English Title}}</p>
+      <p class="summary">{{一句話摘要，25–50 字，與 data/notes.js 相同}}</p>
+      <ul class="tags"><li>{{標籤1}}</li><li>{{標籤2}}</li></ul>
+    </section>
+
+    <!-- 2. 一句話重點（必填） -->
+    <section id="point">
+      <h2>一句話重點</h2>
+      <div class="callout key"><strong>重點：</strong>{{這篇最重要的觀念}}</div>
+    </section>
+
+    <!-- 3. 觀念說明（必填；文法用 .pattern，單字用 .vocab-table，會話用 .dialog） -->
+    <section id="explain">
+      <h2>觀念說明</h2>
+      <p>{{說明}}</p>
+      <p class="pattern" lang="en">{{句型公式}}</p>
+    </section>
+
+    <!-- 4. 例句（必填，至少 3 個） -->
+    <section id="examples">
+      <h2>例句</h2>
+      <div class="example">
+        <p class="en" lang="en">{{English sentence with <b>key word</b>}}</p>
+        <p class="zh">{{中文翻譯}}</p>
+      </div>
+      <div class="example">
+        <p class="en" lang="en">{{English sentence}}</p>
+        <p class="zh">{{中文翻譯}}</p>
+      </div>
+      <div class="example">
+        <p class="en" lang="en">{{English sentence}}</p>
+        <p class="zh">{{中文翻譯}}</p>
+      </div>
+    </section>
+
+    <!-- 5. 常見錯誤（必填，至少 1 個；mistake 分類至少 5 個） -->
+    <section id="mistakes">
+      <h2>常見錯誤</h2>
+      <div class="mistake">
+        <p class="wrong" lang="en">{{錯誤句}}</p>
+        <p class="right" lang="en">{{正確句}}</p>
+        <p class="why">{{原因}}</p>
+      </div>
+    </section>
+
+    <!-- 6. 小練習（必填，2–4 題） -->
+    <section id="practice">
+      <h2>小練習</h2>
+      <details class="quiz">
+        <summary lang="en">1. {{題目}}</summary>
+        <p class="answer"><b lang="en">{{答案}}</b>：{{一句解釋}}</p>
+      </details>
+      <details class="quiz">
+        <summary lang="en">2. {{題目}}</summary>
+        <p class="answer"><b lang="en">{{答案}}</b>：{{一句解釋}}</p>
+      </details>
+    </section>
+
+    <!-- 7. 補充（選填，不需要就整段刪除） -->
+    <section id="extra">
+      <h2>補充</h2>
+      <div class="callout tip"><strong>記憶技巧：</strong>{{內容}}</div>
+    </section>
+
+    <!-- 8–10. 自動產生，不要填 -->
+    <section id="related"></section>
+    <nav id="pager" aria-label="上一篇與下一篇"></nav>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="../data/notes.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

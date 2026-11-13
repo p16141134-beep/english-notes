@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>關於本站｜英文筆記本</title>
+  <meta name="description" content="說明這個英文筆記網站如何用 CLAUDE.md 規則，讓 AI 依同一套格式持續新增筆記。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="about" data-root="">
+  <header id="site-header"></header>
+
+  <main>
+    <section class="note-hero">
+      <h1>關於這本筆記</h1>
+      <p class="en-title" lang="en">How this notebook keeps growing</p>
+      <p class="summary">這個網站不是一次做完的作品，而是一套「之後可以一直照著寫下去」的規則。</p>
+    </section>
+
+    <section id="why">
+      <h2>為什麼要寫 CLAUDE.md</h2>
+      <p>學英文的筆記會一直增加，但如果每次請 AI 幫忙整理時都要重新說明格式，每篇筆記的樣子就會越來越不一樣。所以我先把規則寫成 <code>CLAUDE.md</code>：AI 每次開始工作前先讀這份文件，就知道筆記該分成哪些類別、每一頁要有哪些區塊、例句和錯誤要怎麼寫。</p>
+    </section>
+
+    <section id="rules">
+      <h2>規則的重點</h2>
+      <div class="example">
+        <p><strong>固定五種分類</strong></p>
+        <p class="zh">文法、單字、片語搭配、常見錯誤、情境會話，每一類有自己的顏色與檔名前綴。</p>
+      </div>
+      <div class="example">
+        <p><strong>固定的頁面區塊</strong></p>
+        <p class="zh">一句話重點 → 觀念說明 → 例句（至少 3 句）→ 常見錯誤（至少 1 個）→ 小練習（2–4 題）→ 選填補充。</p>
+      </div>
+      <div class="example">
+        <p><strong>單一資料來源</strong></p>
+        <p class="zh">所有筆記都登記在 <code>data/notes.js</code>，首頁卡片、搜尋、分類篩選、同分類推薦、上一篇／下一篇都自動產生。</p>
+      </div>
+      <div class="example">
+        <p><strong>AI 工作規則與檢查清單</strong></p>
+        <p class="zh">例句必須正確自然、錯誤句只能出現在錯誤示範裡、一篇只講一個主題，完成後照清單自我檢查。</p>
+      </div>
+    </section>
+
+    <section id="structure">
+      <h2>檔案結構</h2>
+<pre><code>english-notes/
+├── CLAUDE.md                 專案規則（AI 必讀）
+├── index.html                首頁：搜尋＋分類篩選
+├── about.html                本頁
+├── assets/style.css          全站樣式與元件
+├── assets/site.js            導覽、卡片、篩選、推薦、上一篇/下一篇
+├── data/notes.js             所有筆記的清單
+├── notes/{分類}-{主題}.html   每篇筆記
+└── templates/note-template.html</code></pre>
+    </section>
+
+    <section id="add">
+      <h2>新增一篇筆記只要兩步</h2>
+      <div class="callout key"><strong>步驟：</strong>① 複製 <code>templates/note-template.html</code> 為 <code>notes/{分類}-{主題}.html</code> 並填內容；② 在 <code>data/notes.js</code> 最後加一筆資料。</div>
+      <div class="callout tip"><strong>給 AI 的一句話：</strong>「請依照 CLAUDE.md 新增一篇筆記：我常把 bored 和 boring 搞混。」</div>
+    </section>
+
+    <section id="links">
+      <h2>相關連結</h2>
+      <ul>
+        <li><a href="https://github.com/p16141134-beep/english-notes/blob/main/CLAUDE.md">閱讀完整的 CLAUDE.md</a></li>
+        <li><a href="https://github.com/p16141134-beep/english-notes">GitHub Repository</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="data/notes.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
